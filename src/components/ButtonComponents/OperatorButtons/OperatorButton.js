@@ -1,14 +1,21 @@
 import React from "react";
+import "../button.css"
 
-const OperatorButton = ({ops}) => {
+const OperatorButton = (props) => {
+
+  const { ops, setOpsDisp } = props;
+
+
   return (
-    <>
     <div>
-        <button>{ops}</button>
+      <button className="button" onClick={() => {
+        setOpsDisp(ops.value)
+        // console.log(ops.value)
+      }}>{ops.char}</button>
     </div>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
   );
 };
+
+{/* Display a button element rendering the data being passed down from the parent container on props */ }
 
 export default OperatorButton;

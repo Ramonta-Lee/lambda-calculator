@@ -1,13 +1,25 @@
 import React from "react";
-import { numbers } from "../../../data";
+import "../button.css"
 
-const NumberButton = ({numbs}) => {
+
+
+
+const NumberButton = (props) => {
+  const {numbs, setNumbDisp} = props;
+
+
   return (
     <div>
-      <button>{numbs}</button>
-        {/* Display a button element rendering the data being passed down from the parent container on props */}
+<button className="button num" onClick={()=> {
+  setNumbDisp(numbs)
+  console.log(numbs)
+}} >{numbs}</button>
     </div>
   );
+
+  {/* Display a button element rendering the data being passed down from the parent container on props */ }
 };
+
+
 
 export default NumberButton;
