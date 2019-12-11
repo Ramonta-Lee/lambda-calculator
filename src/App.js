@@ -29,6 +29,8 @@ function App() {
   
 
 
+
+
   
 
 
@@ -39,7 +41,7 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display setNumbDisp={setNumbDisp} />
+        <Display numbDisp={numbDisp} />
         <div className= "calc-container" >
           <div className= "specials-numbers-container" >
               <Specials  />
